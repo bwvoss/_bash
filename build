@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+touch "$(pwd)/bin/_bash"
+echo "#!/usr/bin/env bash" > "$(pwd)/bin/_bash"
+
+library="$(pwd)/lib/*"
+for file in $library
+do
+  cat "$file" | tail -n+2 >> "$(pwd)/bin/_bash"
+done
+
+chmod +x "$(pwd)/bin/_bash"
+

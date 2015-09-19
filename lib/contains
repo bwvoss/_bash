@@ -1,0 +1,12 @@
+#!/bin/bash
+
+_contains() {
+  list=("${!1}")
+
+  for word in ${list[@]}; do
+    [[ "$word" == "$2" ]] && return 0
+  done
+
+  return 1
+}
+

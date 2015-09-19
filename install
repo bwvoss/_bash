@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+library="$(pwd)/lib/*"
+for file in $library
+do
+  cp "$file" | tail -n+2 >> "$(pwd)/bin/_bash"
+done
+
+cp "$(pwd)/bin/_bash" "$1/bin/"
+echo "Installed _bash to $1/bin/_bash"
