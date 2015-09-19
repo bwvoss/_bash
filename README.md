@@ -9,7 +9,7 @@ Enumerable functions for bash scripting
 
 Bash is a great tool for many jobs.  I find myself using it most for server administration and workspace customizations.
 
-As others have noted(https://github.com/shellfire-dev/shellfire#why) shell scripting can be incredibly powerful, yet is commonly neglected in preference of higher level langauges.
+As others have [noted](https://github.com/shellfire-dev/shellfire#why) shell scripting can be incredibly powerful, yet is commonly neglected in preference of higher level langauges.
 
 When I started shell scripting, I found myself wanting to reach for many enumerable functions. This project is an attempt to help provide bash scripters with enumerable functions to be more productive right away, and have more fun developing readable  scripts.
 
@@ -46,7 +46,10 @@ _size populated_list[@]
 ```
 $ git clone
 $ cd _BASH
-$ ./install /usr/local
+
+#First argument is where to install the bin to
+#Second argument is the dotfile you'd like it sourced from
+$ ./install /usr/local/bin ~/.bash_profile
 ```
 
 ### Development

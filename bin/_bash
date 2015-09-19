@@ -16,3 +16,37 @@ _size() {
   return "${#list[@]}"
 }
 
+
+_contains() {
+  list=("${!1}")
+
+  for word in ${list[@]}; do
+    [[ "$word" == "$2" ]] && return 0
+  done
+
+  return 1
+}
+
+
+_size() {
+  list=("${!1}")
+  return "${#list[@]}"
+}
+
+
+_contains() {
+  list=("${!1}")
+
+  for word in ${list[@]}; do
+    [[ "$word" == "$2" ]] && return 0
+  done
+
+  return 1
+}
+
+
+_size() {
+  list=("${!1}")
+  return "${#list[@]}"
+}
+

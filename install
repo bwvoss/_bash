@@ -3,8 +3,10 @@
 library="$(pwd)/lib/*"
 for file in $library
 do
-  cp "$file" | tail -n+2 >> "$(pwd)/bin/_bash"
+  cat "$file" | tail -n+2 >> "$(pwd)/bin/_bash"
 done
 
-cp "$(pwd)/bin/_bash" "$1/bin/"
-echo "Installed _bash to $1/bin/_bash"
+cp "$(pwd)/_bash" "$1/"
+echo "source $1/_bash" >> "$2"
+
+echo "Installed _bash to $1/_bash and sourced via $2"
