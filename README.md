@@ -36,6 +36,18 @@ _contains list[@] "to_find"
 _contains list[@] "not here"
 => 1
 ```
+##### map
+
+```
+numbers=(1 2 3)
+
+add_one() {
+  echo $(($1 + 1))
+}
+
+($(_map numbers[@] add_one))
+=> (2 3 4)
+```
 
 ##### size
 ```
@@ -45,6 +57,7 @@ _size list[@]
 => 0
 
 populated_list=(1 2 3 4 5 6 7 8)
+
 _size populated_list[@]
 => 8
 ```
