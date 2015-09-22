@@ -15,6 +15,14 @@ When I started shell scripting, I found myself wanting to reach for many enumera
 
 Everybody has their own -- usually difficult to decipher -- flavor of how to implement a solution.  Want to know how the code should look see if an array contains an element?  Check out the difference in opinion and style in [this stackoverflow post](http://stackoverflow.com/questions/3685970/check-if-an-array-contains-a-value)
 
+### Design Considerations
+
+Strings vs Globals
+
+Avoiding eval
+
+Streams and Pipes vs Globals
+
 ### Current Support (for arrays only)
 
 ##### contains

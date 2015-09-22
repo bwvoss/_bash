@@ -1,0 +1,14 @@
+#!/bin/bash
+
+_map() {
+  local list=("${!1}")
+  local callback=$2
+  declare -a __result
+
+  for item in ${list[@]}; do
+    __result+=($($callback $item))
+  done
+
+  echo "${__result[@]}"
+}
+

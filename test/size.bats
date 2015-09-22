@@ -8,7 +8,7 @@ source_file "size"
 
   run _size empty_list[@]
 
-  [ $status -eq 0 ]
+  [ $output = 0 ]
 }
 
 @test "returns 1 for a list of 1" {
@@ -16,7 +16,7 @@ source_file "size"
 
   run _size list[@]
 
-  [ $status -eq 1 ]
+  [ $output = 1 ]
 
 }
 
@@ -25,6 +25,6 @@ source_file "size"
 
   run _size list[@]
 
-  [ $status -eq 10 ]
+  [ $output = 10 ]
 }
 
