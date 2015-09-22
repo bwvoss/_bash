@@ -73,6 +73,20 @@ $ cd _BASH
 $ ./install /usr/local/bin ~/.bash_profile
 ```
 
+### Testing
+
+All testing is done with [bats](https://github.com/sstephenson/bats), can be found in the test directory and can be run with:
+
+```
+./run_tests
+```
+
+or
+
+```
+bats <path-to-test-file>
+```
+
 ### Development
 
 Collections (arrays and associative arrays):
@@ -109,5 +123,4 @@ Array specific:
 - find_index
 - range
 
-All testing is done with [bats](https://github.com/sstephenson/bats), can be found in the test directory and can be run with the run_tests shell script or just ```bats <path-to-test-file>```.
 
