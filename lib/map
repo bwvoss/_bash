@@ -9,6 +9,6 @@ _map() {
     __result+=($($callback $item))
   done
 
-  echo "${__result[@]}"
+  printf "%s " "${__result[@]}"
 }
 
